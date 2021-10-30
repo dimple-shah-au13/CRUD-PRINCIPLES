@@ -2,7 +2,7 @@ import User from '../model/user.js';
 
 // Get all users
 export const getUsers = async (request, response) => {
-    
+    const user = request.body;
     try{
         // finding something inside a model is time taking, so we need to add await
         const users = await User.find();
